@@ -1,0 +1,122 @@
+:root {
+    --lime-green: #32CD32;
+    --dark-green: #006400;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--lime-green);
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+main {
+    padding: 40px 0;
+}
+
+h1, h2 {
+    color: var(--lime-green);
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#location-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--lime-green);
+    color: var(--black);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+#weather-info {
+    background-color: rgba(50, 205, 50, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+#crop-suggestions > div {
+    margin-bottom: 30px;
+}
+
+.crop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.crop-card {
+    background-color: rgba(50, 205, 50, 0.1);
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.crop-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    #location-input, #search-btn {
+        width: 100%;
+        border-radius: 5px;
+    }
+    
+    #search-btn {
+        margin-top: 10px;
+    }
+}
